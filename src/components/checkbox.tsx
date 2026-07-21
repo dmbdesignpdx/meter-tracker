@@ -1,14 +1,7 @@
 "use client";
 
+// Ours
 import type { OPTIONS } from "@/data/content";
-
-interface Props {
-  option: (typeof OPTIONS)[number];
-  disabled: boolean;
-  onCheckedChange: () => void;
-  checked: boolean;
-}
-
 import { Checkbox as ShadcnCheckbox } from "@/components/shadcn/checkbox";
 import {
   Field,
@@ -16,6 +9,13 @@ import {
   FieldLabel,
   FieldTitle,
 } from "@/components/shadcn/field";
+
+interface Props {
+  option: (typeof OPTIONS)[number];
+  disabled: boolean;
+  onCheckedChange: () => void;
+  checked: boolean;
+}
 
 export function Checkbox({
   option,

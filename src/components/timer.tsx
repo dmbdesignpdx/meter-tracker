@@ -28,11 +28,6 @@ export function CountdownTimer() {
     return () => clearInterval(interval);
   }, [isRunning]);
 
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
-  const minutesDisplay = String(minutes).padStart(2, "0");
-  const secondsDisplay = String(seconds).padStart(2, "0");
-
   function handleClick() {
     if (isRunning) {
       setIsRunning(false);
@@ -61,11 +56,9 @@ export function CountdownTimer() {
           "font-mono text-7xl font-semibold tabular-nums",
         )}
       >
-        <span>{minutesDisplay}</span>
-        <span className="opacity-50">:</span>
-        <span>{secondsDisplay}</span>
+        <span>{time}</span>
+        <span className="opacity-50">s</span>
       </output>
-
       <div className="flex flex-col w-full gap-3">
         <Button onClick={handleClick} size="lg">
           {isRunning ? Label.RESET : Label.START}

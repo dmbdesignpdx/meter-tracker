@@ -1,11 +1,15 @@
 export const OPTIONS = [
   {
+    id: "option-0",
+    name: "Defects",
+  },
+  {
     id: "option-1",
     name: "Leaks",
   },
   {
     id: "option-2",
-    name: "Stray current",
+    name: "Stray currents",
   },
   {
     id: "option-3",

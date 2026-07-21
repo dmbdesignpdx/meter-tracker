@@ -1,6 +1,9 @@
 "use client";
 
+// Theirs
 import { useAtomValue } from "jotai";
+
+// Ours
 import { Copy } from "@/data/content";
 import { countAtom } from "@/hooks/atoms";
 

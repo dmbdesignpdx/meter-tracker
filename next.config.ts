@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+import { Url } from "@/data/meta";
+
 const nextConfig: NextConfig = {
   reactCompiler: true,
   trailingSlash: false,
@@ -7,6 +9,7 @@ const nextConfig: NextConfig = {
   experimental: {
     inlineCss: true,
   },
+  allowedDevOrigins: [Url.NETWORK],
 };
 
 export default nextConfig;

@@ -1,9 +1,12 @@
+// Theirs
 import type { Metadata } from "next";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import type { PropsWithChildren } from "react";
-import { Toaster } from "@/components/shadcn/sonner";
-import { cn } from "@/lib/utils";
 
+// Ours
+import { Toaster } from "@/components/shadcn/sonner";
+import { MetaData, Url } from "@/data/meta";
+import { cn } from "@/lib/utils";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -23,8 +26,9 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Meter Tracker",
-  description: "Track your progress of gas meter surveying.",
+  title: MetaData.title,
+  description: MetaData.description,
+  metadataBase: Url.BASE,
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {

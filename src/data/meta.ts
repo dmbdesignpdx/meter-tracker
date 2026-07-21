@@ -1,5 +1,5 @@
 export const MetaData = {
-  title: "Survey Track",
+  title: "Survey Tracker",
   description: "A simple app to track your surveying progress at the meter.",
   author: {
     name: "Daniel Blake",
@@ -20,5 +20,6 @@ export const AppData = {
 
 export const Url = {
   BASE: new URL("https://survey-track.netlify.app"),
-  AUTHOR: new URL("https://danielblake.dev"),
+  AUTHOR: new URL(MetaData.author.website),
+  NETWORK: "192.168.0.208",
 } as const;
